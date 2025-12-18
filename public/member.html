@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/rudransh dham .png">
+    <title>Rudransh dham ashram |हमसे जुड़ें </title>
+    <meta name="description" content="रुद्रांश धाम आश्रम का हिस्सा बनें। सेवा, सत्संग और सनातन संस्कृति के इस पवित्र परिवार में शामिल हों।">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+     <header>
+        <div class="logo-container">
+            <img src="./images/rudransh dham .png" alt="Logo" class="logo-img">
+            <div class="logo-text"><a href="./main.html">Rudransh Dham</a></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="./main.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./seva.html">Seva</a>
+            <a href="./youtube.html">Youtube</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div id="dateTimeBox">Loading...</div>
+            
+            <a href="./member.html" class="join-btn">Become a Member</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with GSAP Magic -->
+    <section class="member-hero">
+        <div class="hero-bg"></div>
+        <div class="floating-lotus-wrap">
+    <img src="./images/Lotus.png" alt="Divine Lotus">
+    <div class="lotus-text">सेवा • शुद्धता • समर्पण</div>
+</div>
+
+        <div class="hero-content">
+            <h1 class="reveal-text">
+                <span>हमसे</span> <span class="highlight">जुड़ें</span>
+            </h1>
+            <p class="reveal-text delay-1">रुद्रांश धाम परिवार का हिस्सा बनें<br>सेवा • सत्संग • संस्कार</p>
+            <div class="glowing-line"></div>
+            <p class="quote reveal-text delay-2">
+                “संगच्छध्वं संवदध्वं सं वो मनांसि जानताम्”<br>
+                <small>— ऋग्वेद</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Membership Options -->
+    <section class="container member-section">
+        <h2 class="section-title text-reveal">सद सदस्यता विकल्प</h2>
+
+        <div class="membership-grid">
+            <!-- Card 1 -->
+            <div class="member-card" data-plan="सामान्य सदस्य">
+                <div class="card-glow"></div>
+                <h3>सामान्य सदस्य</h3>
+                <p class="price">निःशुल्क</p>
+                <ul>
+                    <li>सत्संग में भागीदारी</li>
+                    <li>ईमेल अपडेट्स</li>
+                    <li>ऑनलाइन प्रवचन</li>
+                </ul>
+                <button class="join-now-btn premium">शामिल हों</button>
+            </div>
+
+            <!-- Card 2 - Premium -->
+            <div class="member-card premium" data-plan="सेवक सदस्य">
+                <div class="card-glow"></div>
+                <div class="popular-badge">सबसे लोकप्रिय</div>
+                <h3>सेवक सदस्य</h3>
+                <p class="price">₹501/माह</p>
+                <ul>
+                    <li>सभी सेवाओं में भागीदारी</li>
+                    <li>आश्रम में विशेष दर्शन</li>
+                    <li>गौसेवा में सीधा योगदान</li>
+                    <li>विशेष सत्संग आमंत्रण</li>
+                </ul>
+                <button class="join-now-btn premium">सेवक बनें</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="member-card" data-plan="आजीवन सदस्य">
+                <div class="card-glow"></div>
+                <h3>आजीवन सदस्य</h3>
+                <p class="price">₹11,000 (एक बार)</p>
+                <ul>
+                    <li>आजीवन सभी सुविधाएँ</li>
+                    <li>नाम आश्रम में अंकित</li>
+                    <li>विशेष पूजा में नाम</li>
+                    <li>वार्षिक दर्शन यात्रा</li>
+                </ul>
+                <button class="join-now-btn premium">आजीवन सदस्य बनें</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Form -->
+    <section class="container form-section">
+        <h2 class="section-title text-reveal">अब शामिल हों</h2>
+        <form id="memberForm"  action="/join" method="POST" class="member-form">
+            <div class="form-grid">
+                <input type="text" placeholder="पूरा नाम" required>
+                <input type="tel" placeholder="मोबाइल नंबर" required>
+                <input type="email" placeholder="ईमेल">
+                <select required>
+                    <option value="">सदस्यता चुनें</option>
+                    <option value="सामान्य सदस्य">सामान्य सदस्य (निःशुल्क)</option>
+                    <option value="सेवक सदस्य">सेवक सदस्य (₹501/माह)</option>
+                    <option value="आजीवन सदस्य">आजीवन सदस्य (₹11,000)</option>
+                </select>
+                <input type="text" placeholder="शहर/गाँव">
+                <textarea rows="4" placeholder="कुछ कहना चाहेंगे? (वैकल्पिक)"></textarea>
+            </div>
+            <button type="submit" class="seva-btn large">रुद्रांश धाम परिवार में शामिल हों 🙏</button>
+        </form>
+
+        <div id="successMessage" class="success-box" style="display:none;">
+            <h3>🙏 जय श्री राधे 🙏</h3>
+            <p>आपका पंजीकरण सफलतापूर्वक हो गया है!</p>
+            <p>हमारा परिवार आपका हृदय से स्वागत करता है। जल्द ही आपसे संपर्क किया जाएगा।</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; २०२५ रुद्रांश धाम आश्रम • सभी अधिकार सुरक्षित</p>
+        <p>एक बढ़ती हुई कम्युनिटी जो धर्म, सेवा और प्रेम में आगे बढ़ रही है 🙏</p>
+    </footer>
+        <script>
+document.querySelectorAll(".join-now-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+        const plan = this.closest(".member-card").dataset.plan;
+
+        // Select dropdown auto fill
+        const select = document.querySelector("select");
+        select.value = plan;
+
+        // Scroll to form
+        document.querySelector(".form-section").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+</script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.to(".floating-lotus-wrap", {
+    y: -30,
+    duration: 6,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+});
+
+gsap.to(".floating-lotus-wrap img", {
+    filter: "drop-shadow(0 0 40px rgba(255,215,0,0.9))",
+    duration: 2,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+});
+
+
+          // 1. Date Time Logic
+        function updateDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById("dateTimeBox").innerHTML = `<span style="color:#FF9933"></span> ${time} |  ${date}`;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Text Reveal
+        gsap.from(".reveal-text", {
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.3,
+            ease: "power4.out"
+        });
+
+        gsap.to(".glowing-line", {
+            width: "300px",
+            duration: 2,
+            ease: "power2.inOut",
+            delay: 1
+        });
+
+        // Floating Lotus Animation
+        gsap.to(".floating-lotus", {
+            y: -30,
+            rotation: 10,
+            duration: 6,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // Scroll Trigger Animations
+        gsap.utils.toArray(".text-reveal").forEach(text => {
+            gsap.from(text, {
+                y: 80,
+                opacity: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: text,
+                    start: "top 80%",
+                }
+            });
+        });
+
+        gsap.utils.toArray(".member-card").forEach((card, i) => {
+            gsap.from(card, {
+                y: 200,
+                opacity: 0,
+                duration: 1,
+                delay: i * 0.2,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                }
+            });
+        });
+
+        // Form Success
+        document.getElementById('memberForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            gsap.from("#successMessage", { scale: 0.8, opacity: 0, duration: 1, ease: "back.out(1.7)" });
+        });
+    </script>
+
+</body>
+</html>

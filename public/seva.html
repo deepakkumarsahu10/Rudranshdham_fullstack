@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/rudransh dham .png">
+    <title>Rudransh Dham Ashram || Seva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="./images/rudransh dham .png" alt="Logo" class="logo-img">
+            <div class="logo-text"><a href="./main.html">Rudransh Dham</a></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="./main.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./seva.html">Seva</a>
+            <a href="./youtube.html">Youtube</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div id="dateTimeBox">Loading...</div>
+            <a href="./member.html" class="join-btn">Become a Member</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('./images/download56.jpg') center/cover no-repeat;">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="main-title">
+                जय श्री राधे<br>
+                <span class="highlight">हमारी सेवाएँ</span>
+            </h1>
+            <p class="quote">
+                “सेवा परमो धर्मः”
+            </p>
+        </div>
+    </section>
+
+    <!-- Seva Activities Section -->
+    <section class="container" style="padding: 80px 20px;">
+        <h2 class="section-title">हमारी सेवाओं की झलक</h2>
+        <p style="text-align:center; font-size:1.3rem; margin-bottom:50px; color:#5d4037;">
+            हर सेवा एक कदम है — मानवता, गौमाता और सनातन संस्कृति की ओर...
+        </p>
+
+        <div class="seva-grid">
+
+            <!-- नई सेवा डालने का तरीका: नीचे वाला ब्लॉक कॉपी करके नया बनाओ -->
+            <div class="seva-card">
+                <img src="./seva-images/gauseva1.jpg" alt="गौसेवा - घायल गाय की सेवा">
+                <div class="seva-info">
+                    <h3>गौसेवा - दुर्घटना में घायल गौमाता की चिकित्सा</h3>
+                    <p class="date">५ दिसंबर २०२५</p>
+                    <p>आज हमने सड़क हादसे में घायल गौमाता को बचाया और आश्रम में लाकर उनका इलाज शुरू किया। डॉक्टर की टीम ने तुरंत उपचार किया।</p>
+                </div>
+            </div>
+
+            <div class="seva-card">
+                <img src="./seva-images/janseva-food.jpg" alt="अन्नदान">
+                <div class="seva-info">
+                    <h3>अन्नदान - जरूरतमंदों को भोजन वितरण</h3>
+                    <p class="date">३ दिसंबर २०२५</p>
+                    <p>१०० से अधिक गरीब परिवारों को पौष्टिक भोजन किट वितरित किया गया। हर थाली में माँ अन्नपूर्णा का आशीर्वाद था।</p>
+                </div>
+            </div>
+
+            <div class="seva-card">
+                <img src="./seva-images/bal-sanskar.jpg" alt="बाल संस्कार शिविर">
+                <div class="seva-info">
+                    <h3>बाल संस्कार शिविर</h3>
+                    <p class="date">१ दिसंबर २०२५</p>
+                    <p>५० बच्चों को रामायण की कथाएँ, योग, मंत्र और नैतिक शिक्षा दी गई। हर बच्चे के चेहरे पर आत्मविश्वास की चमक थी।</p>
+                </div>
+            </div>
+
+            <!-- यहाँ से नई सेवा डालें -->
+            <!-- सिर्फ़ कॉपी-पेस्ट करें और फोटो + टेक्स्ट बदलें -->
+            <!--
+            <div class="seva-card">
+                <img src="./seva-images/नई-फोटो.jpg" alt="नई सेवा का नाम">
+                <div class="seva-info">
+                    <h3>नई सेवा का शीर्षक</h3>
+                    <p class="date">तारीख डालें</p>
+                    <p>यहाँ सेवा का विवरण लिखें...</p>
+                </div>
+            </div>
+            -->
+
+        </div>
+
+        <div style="text-align:center; margin-top:60px;">
+            <a href="contact.html" class="seva-btn">हमारे साथ सेवा में शामिल हों</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; २०२५ रुद्रांश धाम आश्रम • सभी अधिकार सुरक्षित</p>
+        <p>एक बढ़ती हुई कम्युनिटी जो धर्म, सेवा और प्रेम में आगे बढ़ रही है 🙏</p>
+    </footer>
+
+    <footer>
+        &copy; 2025 Rudransh Dham Ashram. All Rights Reserved.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        // 1. Date Time Logic
+        function updateDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById("dateTimeBox").innerHTML = `<span style="color:#FF9933"></span> ${time} |  ${date}`;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        // 2. Slideshow Logic
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+        // 3. GSAP Animation (Magic yahan hai)
+        gsap.from("header", { y: -100, duration: 1, ease: "power2.out" });
+        gsap.from(".animate-text", { y: 50, opacity: 0, duration: 1, stagger: 0.3, delay: 0.5 });
+        gsap.from(".animate-btn", { scale: 0, duration: 0.5, delay: 1.5, ease: "back.out(1.7)" });
+    </script>
+</body>
+</html>
